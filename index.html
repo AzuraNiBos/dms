@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forum Diskusi Unik dengan Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+  <!-- Modal login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <form id="loginForm" autocomplete="off" aria-label="Form login forum">
+        <input
+          type="text"
+          id="loginName"
+          name="loginName"
+          placeholder="Masukkan nama Anda"
+          required
+          maxlength="20"
+          aria-required="true"
+        />
+        <button type="submit" class="btn">Masuk</button>
+      </form>
+    </div>
+  </div>
+
+  <header>
+    <h1>💬 Forum Diskusi</h1>
+    <p>Tempat berbagi ide dan pendapat dengan penuh gaya</p>
+  </header>
+
+  <main>
+    <section id="posts" aria-live="polite" class="posts">
+      <!-- Postingan baru akan ditambahkan disini -->
+    </section>
+
+    <section class="new-post">
+      <h2>Tulis Post Baru</h2>
+      <form id="postForm" autocomplete="off" aria-label="Form tambah postingan baru">
+        <!-- Nama otomatis terisi, jadi input ini readonly dan di-hide -->
+        <input type="hidden" id="nameInput" name="name" />
+        <div id="nameDisplay" class="name-display"></div>
+
+        <textarea
+          id="messageInput"
+          name="message"
+          rows="4"
+          placeholder="Tulis pesan..."
+          required
+          maxlength="200"
+          aria-required="true"
+          aria-describedby="message-desc"
+        ></textarea>
+        <small id="message-desc" class="description">Maksimum 200 karakter</small>
+
+        <button type="submit" class="btn">Kirim</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script3.js"></script>
+</body>
+</html>
